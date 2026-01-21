@@ -11,8 +11,8 @@ language:
 
 book:
   title: "Análise de dados criminais usando linguagem R"
-  site-url: "https://ipeadata-lab.github.io/curso_r_intermediario_202501"
-  repo-url: "https://github.com/arturdamiao/2025-02-summer-intro-crime-analysis-R"
+  site-url: "https://arturdamiao.github.io/2026-02-summer-intro-crime-analysis-R/"
+  repo-url: "https://github.com/arturdamiao/2026-02-summer-intro-crime-analysis-R"
   navbar:
     right: 
       - text: "Materiais"
@@ -20,7 +20,7 @@ book:
           - text: "Introdução à Programação para Humanidades"
             href: "https://youtube.com/playlist?list=PLInYN7O8R1DRcWN5pRvZfrG65RgtP1OB1&si=_Izok__wwjtfNpVH"
           - text: "Análise de dados criminais usando linguagem R"
-            href: "https://github.com/arturdamiao/2025-02-summer-intro-crime-analysis-R"
+            href: "https://github.com/arturdamiao/2026-02-summer-intro-crime-analysis-R"
   chapters:
     - text: "Página inicial"
       href: index.qmd  
@@ -30,10 +30,10 @@ page-navigation: true
 
 page-footer: 
   border: true
-  left: "Copyright 2025, Artur Damião" 
+  left: "Copyright 2026, Artur Damião" 
   right: 
     - icon: github
-      href: https://github.com/arturdamiao/2025-02-summer-intro-crime-analysis-R
+      href: https://github.com/arturdamiao/2026-02-summer-intro-crime-analysis-R
 
 
 format:

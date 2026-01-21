@@ -42,19 +42,11 @@
   {
     "objectID": "instalacao.html",
     "href": "instalacao.html",
-<<<<<<< HEAD
-    "title": "2  Pré-curso: Instalação e Ambientação",
+    "title": "2  Pré-curso: Instalação dos softwares",
     "section": "",
     "text": "2.1 Instalação dos softwares",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pré-curso: Instalação e Ambientação</span>"
-=======
-    "title": "2  Instalações e outros preparativos",
-    "section": "",
-    "text": "2.1 Instalação dos softwares",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Instalações e outros preparativos</span>"
->>>>>>> 3ef20b8eb728e852427b9f884917985064b3836c
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pré-curso: Instalação dos softwares</span>"
     ]
   }
 ]
