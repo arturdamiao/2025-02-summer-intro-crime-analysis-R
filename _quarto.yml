@@ -1,0 +1,55 @@
+project:
+  type: book
+  output-dir: docs
+  
+execute:
+  freeze: auto
+
+lang: pt 
+language:
+  title-block-author-single: "Autor"
+
+book:
+  title: "Análise de dados criminais usando linguagem R"
+  site-url: "https://ipeadata-lab.github.io/curso_r_intermediario_202501"
+  repo-url: "https://github.com/arturdamiao/2025-02-summer-intro-crime-analysis-R"
+  navbar:
+    right: 
+      - text: "Materiais"
+        menu:
+          - text: "Introdução à Programação para Humanidades"
+            href: "https://youtube.com/playlist?list=PLInYN7O8R1DRcWN5pRvZfrG65RgtP1OB1&si=_Izok__wwjtfNpVH"
+          - text: "Análise de dados criminais usando linguagem R"
+            href: "https://github.com/arturdamiao/2025-02-summer-intro-crime-analysis-R"
+  chapters:
+    - text: "Página inicial"
+      href: index.qmd  
+
+page-navigation: true
+
+page-footer: 
+  border: true
+  left: "Copyright 2025, Artur Damião" 
+  right: 
+    - icon: github
+      href: https://github.com/arturdamiao/2025-02-summer-intro-crime-analysis-R
+
+
+format:
+  html:
+#    theme: cosmo
+#    css: styles.css
+    toc: true
+    toc-depth: 5
+    link-external-icon: false
+    link-external-newwindow: true
+
+bibliography: references.bib
+
+editor: source
+code-annotations: hover
+
+author:
+  - name: "Artur Damião"
+    url: "https://www.arturdamiao.com/"
+    email: "arturcardoso@usp.br"

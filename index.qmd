@@ -1,0 +1,45 @@
+---
+title: 'Análise de dados criminais usando linguagem R'
+---
+
+## Introdução {.unnumbered}
+
+<img src="https://ipeadata-lab.github.io/curso_r_intermediario_202501/images/00_RStudio_logo.png" align="right" width="120px" class="img-rstudio">
+
+Este site apresenta o material de apoio para o curso **"Análise de dados criminais usando linguagem R"**, oferecido em fevereiro de 2026 no contexto dos Cursos de Verão ofertados pela Faculdade de Letras, Filosofia e Ciências Humanas.
+
+O curso será realizado de forma remota, com aulas ao vivo e atividades práticas.
+
+Além deste site, o material do curso também é composto por:
+
+- [Scripts em R que foram utilizados nas aulas](https://github.com/arturdamiao/2025-02-summer-intro-crime-analysis-R/scripts)
+
+- Gravação das aulas, no YouTube.
+
+
+:::{.callout-note}
+Recomendamos que todas as pessoas participantes que verifiquem a página [Instruções de instalação](instalacao.qmd) antes do início do curso.
+
+Caso tenha alguma dificuldade, entre em contato com o instrutor do curso antes do início das aulas.
+:::
+
+
+## Pré-requisitos {.unnumbered}
+
+Este curso não apresenta pré-requisitos. Entretanto, é importante o engajamento com os materiais apresentados, bem como o *software* em questão. Alguns conceitos básicos de estatística serão mobilizados.
+
+
+## Sobre o instrutor {.unnumbered}
+
+**Artur Damião** <br>
+*Mestrando em Sociologia (USP) | Especialista em Estatística (UFMG)* <br>
+ <br>
+[Email](mailto:arturcardoso@usp.br) | 
+[Website](https://arturdamiao.com) | [GitHub](https://github.com/arturdamiao) | 
+[Currículo Lattes](http://lattes.cnpq.br/6994512988749281) | [Orcid](https://orcid.org/0000-0002-8628-1653) |
+[LinkedIn](https://www.linkedin.com/in/artur-dami%C3%A3o-983b88168/)
+
+
+### Licença {.unnumbered}
+
+Esse material está disponível sob a [licença CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
