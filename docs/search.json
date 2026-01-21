@@ -6,7 +6,8 @@
     "section": "",
     "text": "Introdução\nEste site apresenta o material de apoio para o curso “Análise de dados criminais usando linguagem R”, oferecido em fevereiro de 2026 no contexto dos Cursos de Verão ofertados pela Faculdade de Letras, Filosofia e Ciências Humanas.\nO curso será realizado de forma remota, com aulas ao vivo e atividades práticas.\nAlém deste site, o material do curso também é composto por:",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Página inicial</span>"
+      "Pré-curso",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Análise de dados criminais usando linguagem R</span>"
     ]
   },
   {
@@ -16,7 +17,8 @@
     "section": "",
     "text": "Scripts em R que foram utilizados nas aulas.\nGravação das aulas, no YouTube.\n\n\n\n\n\n\n\nNota\n\n\n\nRecomendamos que todas as pessoas participantes que verifiquem a página Instruções de instalação antes do início do curso.\nCaso tenha alguma dificuldade, entre em contato com o instrutor do curso antes do início das aulas.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Página inicial</span>"
+      "Pré-curso",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Análise de dados criminais usando linguagem R</span>"
     ]
   },
   {
@@ -26,7 +28,19 @@
     "section": "Pré-requisitos",
     "text": "Pré-requisitos\nEste curso não apresenta pré-requisitos. Entretanto, é importante o engajamento com os materiais apresentados, bem como o software em questão. Alguns conceitos básicos de estatística serão mobilizados.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Página inicial</span>"
+      "Pré-curso",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Análise de dados criminais usando linguagem R</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#informações-gerais",
+    "href": "index.html#informações-gerais",
+    "title": "Análise de dados criminais usando linguagem R",
+    "section": "Informações gerais",
+    "text": "Informações gerais\n\nData/horário: 02 a 06 de fevereiro/2026;\n\nDe segunda a sexta-feira: aula ao vivo, on-line, das 18h00 às 20h00.\nPoderá haver alguns exercícios práticos para casa. Todo estudo adional é encorajado. Havendo atividades extras, elas não contarão como nota - apenas para aprendizado próprio.\n\nO curso contará com as gravações de aula disponíveis no YouTube.\n\n\nCertificado\nA presença é obrigatória para os alunos matriculados que têm interesse na certificação. Isso significa que devem cumprir 75% de frequência. Ao todo, serão ofertadas 05 aulas. Logo, para a emissão do certificado (que será feita de forma automática, ao final do curso), é necessário que o aluno esteja presente em 04 das 05 aulas ofertadas. Atenção!\nEm todas os encontro, depois da primeira hora, uma lista de presença será disponibilizada. É importante que o aluno matriculado preencha exatamente o mesmo nome e o mesmo e-mail que o informado no ato da inscrição no curso1.\n1 Por exemplo: se você, no ato da inscrição, abreviou o seu nome como “Artur D. Cardoso”, você deve preencher da mesma forma na lista de presença.\n\nPolítica de participação\nA participação dos alunos (perguntas, intervenções e afins) é encorajada. Contudo, ela respeitará algumas diretrizes:\n\nPara participar, qualquer aluno deverá estender a mão;\nNenhum aluno será interrompido durante sua fala;\nPara evitar a monopolização de participação de homens, fenômeno já detectado em cursos de metodologia, será dada preferência a intervenções de mulheres;\nSerá dada a preferência a alunos que ainda não tenham participado durante a aula.\nAo ingressar no ambiente virtual do Google Meet, permaneça com o microfone fechado, a menos que você queira falar.",
+    "crumbs": [
+      "Pré-curso",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Análise de dados criminais usando linguagem R</span>"
     ]
   },
   {
@@ -34,19 +48,65 @@
     "href": "index.html#sobre-o-instrutor",
     "title": "Análise de dados criminais usando linguagem R",
     "section": "Sobre o instrutor",
-    "text": "Sobre o instrutor\nArtur Damião  Mestrando em Sociologia (USP) | Especialista em Estatística (UFMG)   Email | Website | GitHub | Currículo Lattes | Orcid | LinkedIn\n\nLicença\nEsse material está disponível sob a licença CC BY-SA 4.0.",
+    "text": "Sobre o instrutor\nArtur Damião \n\nSociólogo quantitativo.\nMestrando em Sociologia (DS/USP) na Universidade de São Paulo.\nEspecialista (2026) em Estatística Computacional na Universidade Federal de Minas Gerais.\nHiperfoco em R e programação para as ciências sociais. \n\nEmail | Website | GitHub | Currículo Lattes | Orcid | LinkedIn",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Página inicial</span>"
+      "Pré-curso",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Análise de dados criminais usando linguagem R</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#leituras-recomendadas",
+    "href": "index.html#leituras-recomendadas",
+    "title": "Análise de dados criminais usando linguagem R",
+    "section": "Leituras recomendadas",
+    "text": "Leituras recomendadas\n\nWICKHAM, Hadley. R para Data Science: importe, arrume, transforme, visualize e modele dados. [online]: Alta Books, 2021. https://pt.r4ds.hadley.nz/\n\n\nLicença\nEsse material está disponível sob a licença CC BY-SA 4.0.",
+    "crumbs": [
+      "Pré-curso",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Análise de dados criminais usando linguagem R</span>"
     ]
   },
   {
     "objectID": "instalacao.html",
     "href": "instalacao.html",
-    "title": "2  Pré-curso: Instalação dos softwares",
+    "title": "2  Instalação dos softwares",
     "section": "",
     "text": "2.1 Instalação dos softwares",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Pré-curso: Instalação dos softwares</span>"
+      "Pré-curso",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Instalação dos softwares</span>"
+    ]
+  },
+  {
+    "objectID": "instalacao.html#instalação-dos-softwares",
+    "href": "instalacao.html#instalação-dos-softwares",
+    "title": "2  Instalação dos softwares",
+    "section": "",
+    "text": "2.1.1 R\nO R é um ambiente de software livre para computação estatística e gráficos. (https://www.r-project.org/). Primeiros, é necessário fazer a instalação do R. Basta acessar este link e selecionar a opção “Download R for Windows”, caso você use Windows. Caso você utilize outro sistema operacional (Linux, macOS etc.), basta acessar a página principal de download e selecionar a opção que te atenda.\n\n\n\n\n\n\nAviso\n\n\n\nMesmo que você já tenha o R e o RStudio baixados no seu computador/notebook, recomendo que baixe-os novamente. Isso pois os programas estão em constante aperfeiçamento. A última versão do R é a 4.5.2, e a do RStudio foi lançada em 06 de janeiro de 2026 (algumas semanas atrás!!).\n\n\n\n\n2.1.2 RStudio\nO RStudio é uma IDE (integrated development environment) baseado em Linguagem R, ou seja, um ambiente de desenvolvimento que utilizamos para editar e executar os códigos em R. É mantida pelo time da Posit.\nOutras interfaces são possíveis, como:\n\nPositron;\nVisualStudioCode\nVim\n\nNeste curso, utilizaremos apenas o RStudio.\n\n\n2.1.3 RStudio Cloud\nÉ a IDE RStudio que podemos utilizar via navegador (sem que seja necessário instalar nada). É recomendado caso você não consiga instalar no seu computador. Basta criar uma conta:\n\nRStudio Cloud\n\n\n\n\n\n\n\nDica\n\n\n\nO RStudio Cloud é uma boa opção para quem tem limitações de hardware no computador. Infelizmente, a versão cloud tem algumas limitações, como o limite de 25h de utilização por mês.",
+    "crumbs": [
+      "Pré-curso",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Instalação dos softwares</span>"
+    ]
+  },
+  {
+    "objectID": "instalacao.html#as-vantagens-de-analisar-dados-usando-linguagens-de-programação",
+    "href": "instalacao.html#as-vantagens-de-analisar-dados-usando-linguagens-de-programação",
+    "title": "2  Instalação dos softwares",
+    "section": "2.2 As vantagens de analisar dados usando linguagens de programação",
+    "text": "2.2 As vantagens de analisar dados usando linguagens de programação\n\nO código é uma linguagem, então podemos documentar os passos da nossa análise. Isso é, escrever, linha à linha, os passos do processo de análise.\nO código é texto, então podemos copiar e colar, facilitando enormemente a transposição do código para novos casos.\nAs linguagens de programação para ciência de dados mais utilizadas são de código aberto, em especial R, com dominância em certos nichos acadêmicos, e Pyhton, com popularidade ascentende e mais utilizado no universo corporativo.\n\nFora do Brasil, é mais comum empresas de ponta utilizarem o R ao invés de Python.\n\nAlternativas proprietárias (fechadas, controladas por empresas que cobram por licenças ou assinatura) incluem softwares como Stata, SAS, SPSS, entre outras. Ou seja, mais custo para o usuário.",
+    "crumbs": [
+      "Pré-curso",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Instalação dos softwares</span>"
+    ]
+  },
+  {
+    "objectID": "instalacao.html#o-que-significa-ser-código-aberto-e-software-livre",
+    "href": "instalacao.html#o-que-significa-ser-código-aberto-e-software-livre",
+    "title": "2  Instalação dos softwares",
+    "section": "2.3 O que significa ser código aberto e software livre?",
+    "text": "2.3 O que significa ser código aberto e software livre?\n\nFree Software como em “liberdade” não como em “grátis”. Na prática temos acesso gratuito (na maioria dos casos). Os usuários podem modificar e aperfeiçoar o código-fonte.\nAs pessoas podem acessar as ferramentas, tendo as condições mínimas em termos de hardware e conhecimento, independente de poderem pagar uma licensa de uso.\nVocê pode corrigir problemas e aprimorar a linguagem e eventualmente contribuir e modificar o projeto principal.\nVocê pode desenvolver suas próprias ferramentas.\nPossibilita a existência de uma comunidade ativa.",
+    "crumbs": [
+      "Pré-curso",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Instalação dos softwares</span>"
     ]
   }
 ]

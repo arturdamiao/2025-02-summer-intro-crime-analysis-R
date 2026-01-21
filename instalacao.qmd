@@ -1,5 +1,5 @@
 ---
-title: "Pré-curso: Instalação dos softwares"
+title: "Instalação dos softwares"
 code-annotations: hover
 ---
 
@@ -9,3 +9,57 @@ Os softwares R e RStudio devem ser instalados antes do início do curso. É poss
 
 ## Instalação dos softwares
 
+### R
+
+O `R` é um ambiente de software livre para computação estatística e gráficos. (https://www.r-project.org/). Primeiros, é necessário fazer a instalação do `R`. Basta acessar [este link](https://cran.r-project.org/bin/windows/base/) e selecionar a opção "Download R for Windows", caso você use Windows. Caso você utilize outro sistema operacional (Linux, macOS etc.), basta acessar a [página principal de download](https://cran.r-project.org/) e selecionar a opção que te atenda. 
+
+:::{.callout-warning}
+Mesmo que você já tenha o R e o RStudio baixados no seu computador/notebook, recomendo que baixe-os novamente. Isso pois os programas estão em constante aperfeiçamento. A última versão do `R` é a 4.5.2, e a do `RStudio` foi lançada em 06 de janeiro de 2026 (algumas semanas atrás!!). 
+:::
+
+### RStudio
+
+O **RStudio** é uma IDE (*integrated development environment*) baseado em Linguagem R, ou seja, um ambiente de desenvolvimento que utilizamos para editar e executar os códigos em R. É mantida pelo time da *Posit*.
+
+Outras interfaces são possíveis, como:
+
+* [Positron](https://positron.posit.co/);
+* [VisualStudioCode](https://code.visualstudio.com/docs)
+* [Vim](https://www.vim.org/download.php)
+
+Neste curso, utilizaremos apenas o RStudio. 
+
+### RStudio Cloud
+
+É a IDE RStudio que podemos utilizar via navegador (sem que seja necessário instalar nada). É recomendado caso você não consiga instalar no seu computador. Basta criar uma conta:
+
+-   [RStudio Cloud](https://rstudio.cloud)
+
+:::{.callout-tip}
+O [RStudio Cloud](https://rstudio.cloud) é uma boa opção para quem tem limitações de _hardware_ no computador. Infelizmente, a versão cloud tem algumas limitações, como o limite de 25h de utilização por mês. 
+:::
+
+
+## As vantagens de analisar dados usando linguagens de programação
+
+-   O código é uma linguagem, então podemos documentar os passos da nossa análise. Isso é, escrever, linha à linha, os passos do processo de análise.
+
+-   O código é texto, então podemos copiar e colar, facilitando enormemente a transposição do código para novos casos.
+
+-   As linguagens de programação para ciência de dados mais utilizadas são de código aberto, em especial R, com dominância em certos nichos acadêmicos, e Pyhton, com popularidade ascentende e mais utilizado no universo corporativo.
+    * Fora do Brasil, é mais comum empresas de ponta utilizarem o `R` ao invés de Python.
+
+-   Alternativas proprietárias (fechadas, controladas por empresas que cobram por licenças ou assinatura) incluem softwares como Stata, SAS, SPSS, entre outras. Ou seja, mais **custo** para o usuário.
+
+
+## O que significa ser código aberto e software livre?
+
+1.  *Free Software* como em "liberdade" não como em "grátis". Na prática temos acesso gratuito (na maioria dos casos). Os usuários podem modificar e aperfeiçoar o código-fonte.
+
+1.  As pessoas podem acessar as ferramentas, tendo as condições mínimas em termos de _hardware_ e conhecimento, independente de poderem pagar uma licensa de uso.
+
+1.  Você pode corrigir problemas e aprimorar a linguagem e eventualmente contribuir e modificar o projeto principal.
+
+1.  Você pode desenvolver suas próprias ferramentas. 
+
+1.  Possibilita a existência de uma comunidade ativa. 

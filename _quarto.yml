@@ -21,10 +21,23 @@ book:
             href: "https://youtube.com/playlist?list=PLInYN7O8R1DRcWN5pRvZfrG65RgtP1OB1&si=_Izok__wwjtfNpVH"
           - text: "Análise de dados criminais usando linguagem R"
             href: "https://github.com/arturdamiao/2026-02-summer-intro-crime-analysis-R"
+
   chapters:
-    - text: "Página inicial"
-      href: index.qmd  
-    - href: instalacao.qmd
+    - part: "Pré-curso"
+      chapters:
+        - index.qmd
+        - instalacao.qmd
+    - part: "Como analisar dados criminais?"
+      chapters:
+        - 01-introducao.qmd
+
+
+  # - part: "Pré-curso"
+  #   chapters:
+  #     - text: "Página inicial"
+  #       href: index.qmd  
+  #     - href: instalacao.qmd
+
 
 page-navigation: true
 
@@ -38,12 +51,13 @@ page-footer:
 
 format:
   html:
-#    theme: cosmo
-    css: styles.css
+    theme: cosmo
+#    css: styles.css
     toc: true
     toc-depth: 5
     link-external-icon: false
     link-external-newwindow: true
+    reference-location: margin
 
 bibliography: references.bib
 
@@ -54,3 +68,6 @@ author:
   - name: "Artur Damião"
     url: "https://www.arturdamiao.com/"
     email: "arturcardoso@usp.br"
+    orcid: 0000-0002-8628-1653
+    affiliation: 
+      - name: Programa de Pós-Graduação em Sociologia (USP)

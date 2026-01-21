@@ -8,7 +8,7 @@
 
 <meta name="author" content="Artur Damião">
 
-<title>Análise de dados criminais usando linguagem R</title>
+<title>3&nbsp; Definições – Análise de dados criminais usando linguagem R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./instalacao.html" rel="next">
+<link href="./instalacao.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Pré-curso</a></li><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Análise de dados criminais usando linguagem R</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-introducao.html">Como analisar dados criminais?</a></li><li class="breadcrumb-item"><a href="./01-introducao.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Definições</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Análise de dados criminais usando linguagem R</span></span></a>
   </div>
 </li>
@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-introducao.html" class="sidebar-item-text sidebar-link">
+  <a href="./01-introducao.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Definições</span></span></a>
   </div>
 </li>
@@ -175,32 +175,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Índice</h2>
-   
-  <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
-  <li><a href="#pré-requisitos" id="toc-pré-requisitos" class="nav-link" data-scroll-target="#pré-requisitos">Pré-requisitos</a></li>
-  <li><a href="#informações-gerais" id="toc-informações-gerais" class="nav-link" data-scroll-target="#informações-gerais">Informações gerais</a>
-  <ul>
-  <li><a href="#certificado" id="toc-certificado" class="nav-link" data-scroll-target="#certificado">Certificado</a></li>
-  <li><a href="#política-de-participação" id="toc-política-de-participação" class="nav-link" data-scroll-target="#política-de-participação">Política de participação</a></li>
-  </ul></li>
-  <li><a href="#sobre-o-instrutor" id="toc-sobre-o-instrutor" class="nav-link" data-scroll-target="#sobre-o-instrutor">Sobre o instrutor</a></li>
-  <li><a href="#leituras-recomendadas" id="toc-leituras-recomendadas" class="nav-link" data-scroll-target="#leituras-recomendadas">Leituras recomendadas</a>
-  <ul>
-  <li><a href="#licença" id="toc-licença" class="nav-link" data-scroll-target="#licença">Licença</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Pré-curso</a></li><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Análise de dados criminais usando linguagem R</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-introducao.html">Como analisar dados criminais?</a></li><li class="breadcrumb-item"><a href="./01-introducao.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Definições</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Análise de dados criminais usando linguagem R</h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Definições</span></h1>
 </div>
 
 
@@ -230,85 +213,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introdução" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="introdução">Introdução</h2>
-<p><img src="https://ipeadata-lab.github.io/curso_r_intermediario_202501/images/00_RStudio_logo.png" align="right" width="120px" class="img-rstudio"></p>
-<p>Este site apresenta o material de apoio para o curso <strong>“Análise de dados criminais usando linguagem R”</strong>, oferecido em fevereiro de 2026 no contexto dos Cursos de Verão ofertados pela Faculdade de Letras, Filosofia e Ciências Humanas.</p>
-<p>O curso será realizado de forma remota, com aulas ao vivo e atividades práticas.</p>
-<p>Além deste site, o material do curso também é composto por:</p>
-<ul>
-<li><p><a href="https://github.com/arturdamiao/2026-02-summer-intro-crime-analysis-R">Scripts em R que foram utilizados nas aulas</a>.</p></li>
-<li><p>Gravação das aulas, no YouTube.</p></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Nota
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Recomendamos que todas as pessoas participantes que verifiquem a página <a href="./instalacao.html">Instruções de instalação</a> antes do início do curso.</p>
-<p>Caso tenha alguma dificuldade, entre em contato com o instrutor do curso antes do início das aulas.</p>
-</div>
-</div>
-</section>
-<section id="pré-requisitos" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="pré-requisitos">Pré-requisitos</h2>
-<p>Este curso não apresenta pré-requisitos. Entretanto, é importante o engajamento com os materiais apresentados, bem como o <em>software</em> em questão. Alguns conceitos básicos de estatística serão mobilizados.</p>
-</section>
-<section id="informações-gerais" class="level2 unnumbered page-columns page-full">
-<h2 class="unnumbered anchored" data-anchor-id="informações-gerais">Informações gerais</h2>
-<ul>
-<li><strong>Data/horário:</strong> 02 a 06 de fevereiro/2026;
-<ul>
-<li>De segunda a sexta-feira: aula ao vivo, on-line, das 18h00 às 20h00.</li>
-<li>Poderá haver alguns exercícios práticos para casa. Todo estudo adional é encorajado. Havendo atividades extras, elas não contarão como nota - apenas para aprendizado próprio.</li>
-</ul></li>
-<li>O curso contará com as gravações de aula disponíveis no YouTube.</li>
-</ul>
-<section id="certificado" class="level3 unnumbered page-columns page-full">
-<h3 class="unnumbered anchored" data-anchor-id="certificado">Certificado</h3>
-<p>A presença é <strong>obrigatória</strong> para os alunos matriculados que têm interesse na certificação. Isso significa que devem cumprir 75% de frequência. Ao todo, serão ofertadas 05 aulas. Logo, para a emissão do certificado (que será feita de forma automática, ao final do curso), é necessário que o aluno esteja presente em 04 das 05 aulas ofertadas. <span style="color: red;">Atenção!</span></p>
-<p>Em todas os encontro, depois da primeira hora, uma lista de presença será disponibilizada. É importante que o aluno matriculado preencha <em>exatamente</em> o mesmo nome e o mesmo e-mail que o informado no ato da inscrição no curso<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Por exemplo: se você, no ato da inscrição, abreviou o seu nome como “Artur D. Cardoso”, você deve preencher da mesma forma na lista de presença.</p></div></div></section>
-<section id="política-de-participação" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="política-de-participação">Política de participação</h3>
-<p>A participação dos alunos (perguntas, intervenções e afins) é encorajada. Contudo, ela respeitará algumas diretrizes:</p>
-<ol type="1">
-<li>Para participar, qualquer aluno deverá estender a mão;</li>
-<li>Nenhum aluno será interrompido durante sua fala;</li>
-<li><em>Para evitar a monopolização de participação de homens, fenômeno já detectado em cursos de metodologia, será dada preferência a intervenções de mulheres</em>;</li>
-<li>Será dada a preferência a alunos que ainda não tenham participado durante a aula.</li>
-<li>Ao ingressar no ambiente virtual do Google Meet, permaneça com o microfone fechado, a menos que você queira falar.</li>
-</ol>
-</section>
-</section>
-<section id="sobre-o-instrutor" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sobre-o-instrutor">Sobre o instrutor</h2>
-<p><strong><a href="https://arturdamiao.com/about/">Artur Damião</a></strong> <br></p>
-<ul>
-<li>Sociólogo <strong>quantitativo</strong>.</li>
-<li>Mestrando em Sociologia (DS/USP) na Universidade de São Paulo.</li>
-<li>Especialista (2026) em Estatística Computacional na Universidade Federal de Minas Gerais.</li>
-<li>Hiperfoco em <code>R</code> e programação para as ciências sociais. <br></li>
-</ul>
-<p><a href="mailto:arturcardoso@usp.br">Email</a> | <a href="https://arturdamiao.com">Website</a> | <a href="https://github.com/arturdamiao">GitHub</a> | <a href="http://lattes.cnpq.br/6994512988749281">Currículo Lattes</a> | <a href="https://orcid.org/0000-0002-8628-1653">Orcid</a> | <a href="https://www.linkedin.com/in/artur-dami%C3%A3o-983b88168/">LinkedIn</a></p>
-</section>
-<section id="leituras-recomendadas" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="leituras-recomendadas">Leituras recomendadas</h2>
-<ol type="1">
-<li><a href="https://pt.r4ds.hadley.nz/">WICKHAM, Hadley. R para Data Science: importe, arrume, transforme, visualize e modele dados. [online]: Alta Books, 2021. https://pt.r4ds.hadley.nz/</a></li>
-</ol>
-<section id="licença" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="licença">Licença</h3>
-<p>Esse material está disponível sob a <a href="https://creativecommons.org/licenses/by-sa/4.0/">licença CC BY-SA 4.0</a>.</p>
 
-
-</section>
-</section>
 
 
 </main> <!-- /main -->
@@ -758,11 +663,11 @@ Nota
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./instalacao.html" class="pagination-link" aria-label="Instalação dos softwares">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Instalação dos softwares</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./instalacao.html" class="pagination-link" aria-label="Instalação dos softwares">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Instalação dos softwares</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
