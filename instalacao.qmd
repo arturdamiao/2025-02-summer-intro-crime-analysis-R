@@ -1,0 +1,11 @@
+---
+title: "Instalações e outros preparativos"
+code-annotations: hover
+---
+
+::: callout-important
+Os softwares R e RStudio devem ser instalados antes do início do curso. É possível utilizar na versão em nuvem também.
+:::
+
+## Instalação dos softwares
+
