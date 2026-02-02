@@ -14,7 +14,10 @@ pacman::p_load(tidyverse,
 ## Diretamente no R: ----
 
 ### Função download.file, onde você especifica o link e informa uma pasta. 
-download.file("https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2025.xlsx", "dados/dados_ssp.xlsx", mode = "wb")
+download.file(
+  url = "https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2025.xlsx", 
+  destfile = "dados/dados_ssp.xlsx", 
+  mode = "wb")
 
 
 ssp_2025 <- read_excel("dados/dados_ssp.xlsx", sheet = 2)
