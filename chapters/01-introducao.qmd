@@ -2,3 +2,57 @@
 title: "Definições"
 ---
 
+A análise de dados criminais não pode ser entendida apenas como uma ferramenta estatística. É necessário compreender os processos sociais interligados na construção do crime. Analisar o crime requer entender que o "dado" não é um fato neutro, mas o resultado de processos institucionais, políticos e sociais.
+
+
+##  O que é Crime? Uma Definição Abrangente
+
+Para a análise de dados, o crime é frequentemente reduzido a uma entrada em um banco de dados. Contudo, sociologicamente, o **crime é uma construção social e jurídica**.
+
+* **Perspectiva Legalista:** Qualquer ação ou omissão que viola uma norma penal estabelecida pelo Estado.
+* **Perspectiva Sociológica:** O crime é um comportamento que rompe com as normas sociais vigentes, mas cuja rotulação depende do poder de punir. Como diria Durkheim, o crime é "normal" em qualquer sociedade, pois define os limites da moralidade coletiva (@durkheim2015).
+* **A "Cifra Negra":** Os dados oficiais representam apenas uma fração da criminalidade real. A diferença entre o crime ocorrido e o crime registrado é o que chamamos de cifra negra.
+
+
+##  Gary Becker e a Economia do Crime
+
+A entrada da análise de dados no mundo criminal deve muito a **Gary Becker**. Em sua obra seminal de 1968, ele propôs que o criminoso é um "agente racional".
+
+### A Lógica do Custo-Benefício
+
+@becker1968 aplicou modelos microeconômicos ao comportamento desviante. Segundo ele, o indivíduo decide cometer um crime baseando-se em uma equação de utilidade esperada:
+
+$$
+E[U] = p \cdot U(b - f) + (1 - p) \cdot U(b)
+$$
+
+Onde:
+
+* $p$ é a probabilidade de captura e condenação.
+* $b$ é o benefício do crime.
+* $f$  é a punição (multa, prisão, etc.).
+
+Embora inovadora para o policiamento preditivo, a visão de Becker é criticada por ignorar fatores estruturais (pobreza, racismo sistêmico) e por assumir uma racionalidade perfeita que raramente existe em crimes passionais ou de impulso.
+
+
+## Perspectivas Críticas: Foucault e Garland
+
+Enquanto Becker foca na escolha individual, autores como Foucault e Garland olham para o sistema que gera os dados.
+
+### Michel Foucault: A Disciplina e a Vigilância
+
+Em *Vigiar e Punir*, Foucault argumenta que o sistema penal não visa apenas "eliminar" o crime, mas **gerir as ilegalidades**. A análise de dados, sob esta lente, pode ser vista como uma evolução do "Panoptismo" — uma forma de tornar os indivíduos visíveis e governáveis através da coleta constante de informações.
+
+### David Garland: A Cultura do Controle
+
+Garland descreve a transição do "reabilitacionismo" para a "cultura do controle". Para ele, a análise de dados moderna serve a uma obsessão por segurança e gestão de riscos. Os dados não são usados para entender o infrator, mas para classificar populações como "perigosas", alimentando o encarceramento em massa.
+
+
+##  O Viés dos Dados: Over-policing e Under-policing
+
+É necessário ceticismo ao interpretar dados criminais. Agentes criminais atuam de forma racional à todo momento? A polícia é neutra em sua atuação?. Os mapas de calor (*heatmaps*) muitas vezes não mostram onde o crime acontece, mas sim **onde a polícia está**.
+
+* **Over-policing (Superpoliciamento):** Ocorre em áreas periféricas ou racializadas. A presença massiva do Estado gera mais registros de crimes menores (drogas, resistência), criando um ciclo de retroalimentação: o dado diz que a área é perigosa porque a polícia está lá, e a polícia vai para lá porque o dado diz que é perigosa.
+* **Under-policing (Subpoliciamento):** Ocorre quando o Estado falha em proteger certas comunidades ou em investigar crimes de colarinho branco e violência doméstica. Aqui, o dado é silencioso, criando a ilusão de segurança onde existe impunidade.
+
+## Referências

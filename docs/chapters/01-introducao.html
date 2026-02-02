@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -72,6 +92,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -203,8 +252,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#o-que-é-crime-uma-definição-abrangente" id="toc-o-que-é-crime-uma-definição-abrangente" class="nav-link active" data-scroll-target="#o-que-é-crime-uma-definição-abrangente"><span class="header-section-number">3.1</span> O que é Crime? Uma Definição Abrangente</a></li>
+  <li><a href="#gary-becker-e-a-economia-do-crime" id="toc-gary-becker-e-a-economia-do-crime" class="nav-link" data-scroll-target="#gary-becker-e-a-economia-do-crime"><span class="header-section-number">3.2</span> Gary Becker e a Economia do Crime</a>
+  <ul>
+  <li><a href="#a-lógica-do-custo-benefício" id="toc-a-lógica-do-custo-benefício" class="nav-link" data-scroll-target="#a-lógica-do-custo-benefício"><span class="header-section-number">3.2.1</span> A Lógica do Custo-Benefício</a></li>
+  </ul></li>
+  <li><a href="#perspectivas-críticas-foucault-e-garland" id="toc-perspectivas-críticas-foucault-e-garland" class="nav-link" data-scroll-target="#perspectivas-críticas-foucault-e-garland"><span class="header-section-number">3.3</span> Perspectivas Críticas: Foucault e Garland</a>
+  <ul>
+  <li><a href="#michel-foucault-a-disciplina-e-a-vigilância" id="toc-michel-foucault-a-disciplina-e-a-vigilância" class="nav-link" data-scroll-target="#michel-foucault-a-disciplina-e-a-vigilância"><span class="header-section-number">3.3.1</span> Michel Foucault: A Disciplina e a Vigilância</a></li>
+  <li><a href="#david-garland-a-cultura-do-controle" id="toc-david-garland-a-cultura-do-controle" class="nav-link" data-scroll-target="#david-garland-a-cultura-do-controle"><span class="header-section-number">3.3.2</span> David Garland: A Cultura do Controle</a></li>
+  </ul></li>
+  <li><a href="#o-viés-dos-dados-over-policing-e-under-policing" id="toc-o-viés-dos-dados-over-policing-e-under-policing" class="nav-link" data-scroll-target="#o-viés-dos-dados-over-policing-e-under-policing"><span class="header-section-number">3.4</span> O Viés dos Dados: Over-policing e Under-policing</a></li>
+  <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências"><span class="header-section-number">3.5</span> Referências</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -241,8 +307,67 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>A análise de dados criminais não pode ser entendida apenas como uma ferramenta estatística. É necessário compreender os processos sociais interligados na construção do crime. Analisar o crime requer entender que o “dado” não é um fato neutro, mas o resultado de processos institucionais, políticos e sociais.</p>
+<section id="o-que-é-crime-uma-definição-abrangente" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="o-que-é-crime-uma-definição-abrangente"><span class="header-section-number">3.1</span> O que é Crime? Uma Definição Abrangente</h2>
+<p>Para a análise de dados, o crime é frequentemente reduzido a uma entrada em um banco de dados. Contudo, sociologicamente, o <strong>crime é uma construção social e jurídica</strong>.</p>
+<ul>
+<li><strong>Perspectiva Legalista:</strong> Qualquer ação ou omissão que viola uma norma penal estabelecida pelo Estado.</li>
+<li><strong>Perspectiva Sociológica:</strong> O crime é um comportamento que rompe com as normas sociais vigentes, mas cuja rotulação depende do poder de punir. Como diria Durkheim, o crime é “normal” em qualquer sociedade, pois define os limites da moralidade coletiva <span class="citation" data-cites="durkheim2015">(<a href="#ref-durkheim2015" role="doc-biblioref">Durkheim 2015, 75</a>)</span>.</li>
+<li><strong>A “Cifra Negra”:</strong> Os dados oficiais representam apenas uma fração da criminalidade real. A diferença entre o crime ocorrido e o crime registrado é o que chamamos de cifra negra.</li>
+</ul>
+</section>
+<section id="gary-becker-e-a-economia-do-crime" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="gary-becker-e-a-economia-do-crime"><span class="header-section-number">3.2</span> Gary Becker e a Economia do Crime</h2>
+<p>A entrada da análise de dados no mundo criminal deve muito a <strong>Gary Becker</strong>. Em sua obra seminal de 1968, ele propôs que o criminoso é um “agente racional”.</p>
+<section id="a-lógica-do-custo-benefício" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="a-lógica-do-custo-benefício"><span class="header-section-number">3.2.1</span> A Lógica do Custo-Benefício</h3>
+<p><span class="citation" data-cites="becker1968">Becker (<a href="#ref-becker1968" role="doc-biblioref">1968</a>)</span> aplicou modelos microeconômicos ao comportamento desviante. Segundo ele, o indivíduo decide cometer um crime baseando-se em uma equação de utilidade esperada:</p>
+<p><span class="math display">\[
+E[U] = p \cdot U(b - f) + (1 - p) \cdot U(b)
+\]</span></p>
+<p>Onde:</p>
+<ul>
+<li><span class="math inline">\(p\)</span> é a probabilidade de captura e condenação.</li>
+<li><span class="math inline">\(b\)</span> é o benefício do crime.</li>
+<li><span class="math inline">\(f\)</span> é a punição (multa, prisão, etc.).</li>
+</ul>
+<p>Embora inovadora para o policiamento preditivo, a visão de Becker é criticada por ignorar fatores estruturais (pobreza, racismo sistêmico) e por assumir uma racionalidade perfeita que raramente existe em crimes passionais ou de impulso.</p>
+</section>
+</section>
+<section id="perspectivas-críticas-foucault-e-garland" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="perspectivas-críticas-foucault-e-garland"><span class="header-section-number">3.3</span> Perspectivas Críticas: Foucault e Garland</h2>
+<p>Enquanto Becker foca na escolha individual, autores como Foucault e Garland olham para o sistema que gera os dados.</p>
+<section id="michel-foucault-a-disciplina-e-a-vigilância" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="michel-foucault-a-disciplina-e-a-vigilância"><span class="header-section-number">3.3.1</span> Michel Foucault: A Disciplina e a Vigilância</h3>
+<p>Em <em>Vigiar e Punir</em>, Foucault argumenta que o sistema penal não visa apenas “eliminar” o crime, mas <strong>gerir as ilegalidades</strong>. A análise de dados, sob esta lente, pode ser vista como uma evolução do “Panoptismo” — uma forma de tornar os indivíduos visíveis e governáveis através da coleta constante de informações.</p>
+</section>
+<section id="david-garland-a-cultura-do-controle" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="david-garland-a-cultura-do-controle"><span class="header-section-number">3.3.2</span> David Garland: A Cultura do Controle</h3>
+<p>Garland descreve a transição do “reabilitacionismo” para a “cultura do controle”. Para ele, a análise de dados moderna serve a uma obsessão por segurança e gestão de riscos. Os dados não são usados para entender o infrator, mas para classificar populações como “perigosas”, alimentando o encarceramento em massa.</p>
+</section>
+</section>
+<section id="o-viés-dos-dados-over-policing-e-under-policing" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="o-viés-dos-dados-over-policing-e-under-policing"><span class="header-section-number">3.4</span> O Viés dos Dados: Over-policing e Under-policing</h2>
+<p>É necessário ceticismo ao interpretar dados criminais. Agentes criminais atuam de forma racional à todo momento? A polícia é neutra em sua atuação?. Os mapas de calor (<em>heatmaps</em>) muitas vezes não mostram onde o crime acontece, mas sim <strong>onde a polícia está</strong>.</p>
+<ul>
+<li><strong>Over-policing (Superpoliciamento):</strong> Ocorre em áreas periféricas ou racializadas. A presença massiva do Estado gera mais registros de crimes menores (drogas, resistência), criando um ciclo de retroalimentação: o dado diz que a área é perigosa porque a polícia está lá, e a polícia vai para lá porque o dado diz que é perigosa.</li>
+<li><strong>Under-policing (Subpoliciamento):</strong> Ocorre quando o Estado falha em proteger certas comunidades ou em investigar crimes de colarinho branco e violência doméstica. Aqui, o dado é silencioso, criando a ilusão de segurança onde existe impunidade.</li>
+</ul>
+</section>
+<section id="referências" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="referências"><span class="header-section-number">3.5</span> Referências</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-becker1968" class="csl-entry" role="listitem">
+Becker, Gary S. 1968. <span>«Crime and <span>Punishment</span>: <span>An Economic Approach</span>»</span>. <em>Journal of Political Economy</em> 76 (2): 169–217. <a href="https://www.jstor.org/stable/1830482">https://www.jstor.org/stable/1830482</a>.
+</div>
+<div id="ref-durkheim2015" class="csl-entry" role="listitem">
+Durkheim, Émile. 2015. <em><span>Da divisão do trabalho social</span></em>. 1.ª ed. São Paulo: Edipro.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
