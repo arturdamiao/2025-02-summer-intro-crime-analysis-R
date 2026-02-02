@@ -37,13 +37,6 @@ book:
         - chapters/03-importando-dados.qmd
 
 
-  # - part: "Pré-curso"
-  #   chapters:
-  #     - text: "Página inicial"
-  #       href: index.qmd  
-  #     - href: instalacao.qmd
-
-
 page-navigation: true
 
 page-footer: 
