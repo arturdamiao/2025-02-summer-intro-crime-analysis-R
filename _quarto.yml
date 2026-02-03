@@ -29,11 +29,16 @@ book:
           - text: "Análise de dados criminais usando linguagem R"
             icon: youtube
             href: "https://www.youtube.com/playlist?list=PLInYN7O8R1DQnnLGNt6udOCpGoH3E7un1"
+          - text: "[IPEA] Introdução à análise de dados no R"
+            icon: pencil
+            href: "https://ipeadata-lab.github.io/curso_r_intro_202409/"
       - text: "Slides"
         menu: 
           - text: "Slides Aula 01"
             icon: display
             href: slides/01-apresentacao.html
+      - icon: youtube
+        href: "https://www.youtube.com/playlist?list=PLInYN7O8R1DQnnLGNt6udOCpGoH3E7un1"
 
   chapters:
     - part: "Pré-curso"
@@ -59,10 +64,11 @@ page-footer:
       href: https://github.com/arturdamiao/2026-02-summer-intro-crime-analysis-R
 
 
+
 format:
   html:
     theme: cosmo
-#    css: custom.css
+    css: custom.css
     toc: true
     toc-depth: 5
     link-external-icon: false
