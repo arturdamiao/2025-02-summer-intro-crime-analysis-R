@@ -22,8 +22,20 @@ download.file(
 
 ssp_2025 <- read_excel("dados/dados_ssp.xlsx", sheet = 2)
 
-ssp_2025
+# A base completa  possui quase 600 mil linhas, e 29 colunas. É bastante
+# pesado para baixar e ler no R. Portanto, vamos samplear 10 mil observações
+# aleatoriamente
 
+ssp_amostra <- ssp_2025 %>% 
+  sample_n(10000)
+
+# Salvando a amostra em xlsx
+writexl::write_xlsx(ssp_amostra, path = "dados/amostra_ssp.xlsx")
+
+# Salvando como csv
+write.csv2(ssp_amostra, file = "dados/amostra_ssp.csv")
+
+# Salvando como rds
 saveRDS(ssp_2025, file = "dados/ssp_criminais_2025.rds")
 
 ## Diretamente pelo site da SSP: ----
