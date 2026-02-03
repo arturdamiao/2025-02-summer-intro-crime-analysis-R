@@ -440,44 +440,22 @@
     ]
   },
   {
-    "objectID": "chapters/03-importando-dados.html",
-    "href": "chapters/03-importando-dados.html",
-    "title": "6  Analisando dados da Secretaria de Segurança Pública",
-    "section": "",
-    "text": "6.1 Nosso conjunto de dados\nNosso conjunto de dados, para fins de exploração, serão as estatísticas dos dados criminais da Secretaria de Segurança Pública do Estado de São Paulo para o ano de 2025. Os dados estão disponíveis no portal da SSP.",
-    "crumbs": [
-      "O caso de São Paulo",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analisando dados da Secretaria de Segurança Pública</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/03-importando-dados.html#importando-os-pacotes-no-r",
-    "href": "chapters/03-importando-dados.html#importando-os-pacotes-no-r",
-    "title": "6  Analisando dados da Secretaria de Segurança Pública",
-    "section": "",
-    "text": "Nota\n\n\n\nUm pacote é uma “caixa de ferramentas” extra que você instala no R para ganhar novas funcionalidades. Ele reúne códigos, dados e documentação em um único lugar. O termo biblioteca (library) refere-se ao local (a pasta no seu computador) onde esses pacotes ficam guardados.\n\n\n\n\nSempre instala-se um pacote novo. Este processo só é feito uma vez, ou seja, utiliza-se a função install.packages apenas quando ainda não possuímos o pacote em nossa máquina.\nApós a primeira instalação, só é necessário instalar um pacote novamente caso ele tenha sido atualizado (lembra que a comunidade é ativa?). Caso não seja o caso, só é necessário “carregar” nosso pacote para a sessão.\n\n\n\n\n\n\n\n\n\nDicaDica 1\n\n\n\nO pacote pacman permite que você faça, ao mesmo tempo, a instalação e o carregamento do pacote, com a função p_load. Ao invés de fazer, por exemplo:\n\ninstall.packages(\"tidyverse\")\nlibrary(tidyverse)\n\nvocê pode fazer apenas:\n\np_load(tidyverse)\n\nIsso é particularmente útil quando você precisa importar muitos pacotes!\n\n\n\n\n\n\n\n\n\nFigura 6.1: Usando uma função sem carregar o pacote",
-    "crumbs": [
-      "O caso de São Paulo",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analisando dados da Secretaria de Segurança Pública</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/03-importando-dados.html#nosso-conjunto-de-dados",
-    "href": "chapters/03-importando-dados.html#nosso-conjunto-de-dados",
-    "title": "6  Analisando dados da Secretaria de Segurança Pública",
-    "section": "",
-    "text": "6.1.1 Lendo dados direto do site da Secretaria\nUtilizando a função import do pacote rio, é possível copiar a url e ler diretamente da página do site da SSP. Ao passarmos o mouse em cima do ano de 2025 nas estatísticas de dados criminais da SSP, podemos ver que, no final da página, nos é apresentado um link. Podemos copiar este link e lê-lo diretamente do RStudio, conforme apresentado na Figura 6.1:\n\n\n\n\n\n\nFigura 6.1: Importando URL\n\n\n\n\nssp_2025 &lt;- rio::import(\"https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2025.xlsx\")\n\nVisualindo as primeiras linhas:\n\nglimpse(ssp_2025)",
-    "crumbs": [
-      "O caso de São Paulo",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analisando dados da Secretaria de Segurança Pública</span>"
-    ]
-  },
-  {
     "objectID": "chapters/02a-manipulacao-dados.html",
     "href": "chapters/02a-manipulacao-dados.html",
     "title": "5  Aprendendo a manipular dados",
     "section": "",
     "text": "5.1 Importando os pacotes no R\nDentro do R, existem inúmeras formas de se importar um conjunto de dados. Os dados podem ter os mais diversos formatos (extensões):\nComo vimos, a primeira coisa a se fazer dentro de um script no R é fazer a importação dos pacotes (ou bibliotecas).\nGeralmente, precisamos, primeiramente, instalar um pacote com a função install.packages e então “carregá-lo” para nosso ambiente, com a função library. Carregar um pacote significa, basicamente, dizer ao R que queremos utilizar um conjunto de ferramentas na nossa sessão. Dito isso:\ninstall.packages(\"tidyverse\")\nlibrary(tidyverse)\nVocê pode ter notado que não utilizei as aspas (““) com a função library. Isso é opcional, você pode ou não utilizá-las.\nCaso você se esqueça de importar algum pacote, não se preocupe! É possível utilizar uma função de um pacote específico (desde que você tenha ele baixado no seu computador) sem precisar utilizar o library(nome_do_pacote) no começo do seu script. Ao especificar o nome do pacote e utilizar ::, como demonstrado na Figura 5.1, é possível acessar a função desejada:\nAgora, basta carregamos os pacaotes de interesse\npacman::p_load(\n              tidyverse, # pacotão com vários pacotes core \n              rio,       # pacote que facilita a leitura de qualquer formato\n              readxl,    # pacote para ler no formato .xlsx\n              janitor    # pacote para limpeza de dados\n               )\nO script de nossa aula está disponível aqui!",
+    "crumbs": [
+      "Como analisar dados criminais?",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Aprendendo a manipular dados</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02a-manipulacao-dados.html#importando-os-pacotes-no-r",
+    "href": "chapters/02a-manipulacao-dados.html#importando-os-pacotes-no-r",
+    "title": "5  Aprendendo a manipular dados",
+    "section": "",
+    "text": "Nota\n\n\n\nUm pacote é uma “caixa de ferramentas” extra que você instala no R para ganhar novas funcionalidades. Ele reúne códigos, dados e documentação em um único lugar. O termo biblioteca (library) refere-se ao local (a pasta no seu computador) onde esses pacotes ficam guardados.\n\n\n\n\nSempre instala-se um pacote novo. Este processo só é feito uma vez, ou seja, utiliza-se a função install.packages apenas quando ainda não possuímos o pacote em nossa máquina.\nApós a primeira instalação, só é necessário instalar um pacote novamente caso ele tenha sido atualizado (lembra que a comunidade é ativa?). Caso não seja o caso, só é necessário “carregar” nosso pacote para a sessão.\n\n\n\n\n\n\n\n\n\nDicaDica 1\n\n\n\nO pacote pacman permite que você faça, ao mesmo tempo, a instalação e o carregamento do pacote, com a função p_load. Ao invés de fazer, por exemplo:\n\ninstall.packages(\"tidyverse\")\nlibrary(tidyverse)\n\nvocê pode fazer apenas:\n\np_load(tidyverse)\n\nIsso é particularmente útil quando você precisa importar muitos pacotes!\n\n\n\n\n\n\n\n\n\nFigura 5.1: Usando uma função sem carregar o pacote",
     "crumbs": [
       "Como analisar dados criminais?",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Aprendendo a manipular dados</span>"
@@ -572,14 +550,25 @@
     ]
   },
   {
-    "objectID": "chapters/02a-manipulacao-dados.html#importando-os-pacotes-no-r",
-    "href": "chapters/02a-manipulacao-dados.html#importando-os-pacotes-no-r",
-    "title": "5  Aprendendo a manipular dados",
+    "objectID": "chapters/03-importando-dados.html",
+    "href": "chapters/03-importando-dados.html",
+    "title": "6  Analisando dados da Secretaria de Segurança Pública",
     "section": "",
-    "text": "Nota\n\n\n\nUm pacote é uma “caixa de ferramentas” extra que você instala no R para ganhar novas funcionalidades. Ele reúne códigos, dados e documentação em um único lugar. O termo biblioteca (library) refere-se ao local (a pasta no seu computador) onde esses pacotes ficam guardados.\n\n\n\n\nSempre instala-se um pacote novo. Este processo só é feito uma vez, ou seja, utiliza-se a função install.packages apenas quando ainda não possuímos o pacote em nossa máquina.\nApós a primeira instalação, só é necessário instalar um pacote novamente caso ele tenha sido atualizado (lembra que a comunidade é ativa?). Caso não seja o caso, só é necessário “carregar” nosso pacote para a sessão.\n\n\n\n\n\n\n\n\n\nDicaDica 1\n\n\n\nO pacote pacman permite que você faça, ao mesmo tempo, a instalação e o carregamento do pacote, com a função p_load. Ao invés de fazer, por exemplo:\n\ninstall.packages(\"tidyverse\")\nlibrary(tidyverse)\n\nvocê pode fazer apenas:\n\np_load(tidyverse)\n\nIsso é particularmente útil quando você precisa importar muitos pacotes!\n\n\n\n\n\n\n\n\n\nFigura 5.1: Usando uma função sem carregar o pacote",
+    "text": "6.1 Nosso conjunto de dados\nNosso conjunto de dados, para fins de exploração, serão as estatísticas dos dados criminais da Secretaria de Segurança Pública do Estado de São Paulo para o ano de 2025. Os dados estão disponíveis no portal da SSP.",
     "crumbs": [
-      "Como analisar dados criminais?",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Aprendendo a manipular dados</span>"
+      "O caso de São Paulo",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analisando dados da Secretaria de Segurança Pública</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-importando-dados.html#nosso-conjunto-de-dados",
+    "href": "chapters/03-importando-dados.html#nosso-conjunto-de-dados",
+    "title": "6  Analisando dados da Secretaria de Segurança Pública",
+    "section": "",
+    "text": "6.1.1 Lendo dados direto do site da Secretaria\nUtilizando a função import do pacote rio, é possível copiar a url e ler diretamente da página do site da SSP. Ao passarmos o mouse em cima do ano de 2025 nas estatísticas de dados criminais da SSP, podemos ver que, no final da página, nos é apresentado um link. Podemos copiar este link e lê-lo diretamente do RStudio, conforme apresentado na Figura 6.1:\n\n\n\n\n\n\nFigura 6.1: Importando URL\n\n\n\n\nssp_2025 &lt;- rio::import(\"https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2025.xlsx\")\n\nVisualindo as primeiras linhas:\n\nglimpse(ssp_2025)",
+    "crumbs": [
+      "O caso de São Paulo",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analisando dados da Secretaria de Segurança Pública</span>"
     ]
   }
 ]
