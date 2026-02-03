@@ -1,6 +1,11 @@
+# Inspirado em: 
+# - https://github.com/ipeadata-lab/curso_r_intro_202409/blob/main/_quarto.yml
+
 project:
   type: book
   output-dir: docs
+  resources: 
+    - slides/
   
 execute:
   freeze: auto
@@ -19,9 +24,16 @@ book:
       - text: "Materiais"
         menu:
           - text: "Introdução à Programação para Humanidades"
+            icon: youtube
             href: "https://youtube.com/playlist?list=PLInYN7O8R1DRcWN5pRvZfrG65RgtP1OB1&si=_Izok__wwjtfNpVH"
           - text: "Análise de dados criminais usando linguagem R"
-            href: "https://github.com/arturdamiao/2026-02-summer-intro-crime-analysis-R"
+            icon: youtube
+            href: "https://www.youtube.com/playlist?list=PLInYN7O8R1DQnnLGNt6udOCpGoH3E7un1"
+      - text: "Slides"
+        menu: 
+          - text: "Slides Aula 01"
+            icon: display
+            href: slides/01-apresentacao.html
 
   chapters:
     - part: "Pré-curso"
@@ -50,7 +62,7 @@ page-footer:
 format:
   html:
     theme: cosmo
-#    css: styles.css
+#    css: custom.css
     toc: true
     toc-depth: 5
     link-external-icon: false

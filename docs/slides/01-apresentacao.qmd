@@ -1,0 +1,649 @@
+---
+title: "Análise de Dados Criminais usando `R`"
+subtitle: "Aula 01 - Conhecendo a ferramenta"
+format: 
+  revealjs:
+    incremental: true   
+    logo: "http://www.fflch.usp.br/sites/fflch.usp.br/files/2019-04/06_fflch_simbolo.png"
+    footer: "Slides por [Artur Damião](https://arturdamiao.com), feitos com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Licença de uso: [CC-BY-SA](https://arturdamiao.com/license/)."
+    theme: ["custom.scss"]
+    slide-number: c/t
+    show-slide-number: all
+    hash-type: number
+#    smaller: true
+
+editor: source
+
+lang: pt
+author: 
+  - name: Artur Damião
+    email: arturcardoso@usp.br
+    orcid: 0000-0002-8628-1653
+  
+date: today
+date-format: long
+---
+
+
+## Ministrantes
+
+
+- [Artur Damião](https://arturdamiao.com/about/)
+- Sociólogo **quantitativo**.
+- Mestrando em Sociologia (DS/USP) na Universidade de São Paulo.
+- Especialista (2026) em Estatística Computacional na Universidade Federal de Minas Gerais.
+- Hiperfoco em `R` e programação para as ciências sociais.
+
+
+
+## Informações gerais
+
+-   **Data/horário:** 02 a 06 de fevereiro/2026;
+    -   Todos os dias da semana: aula ao vivo, on-line, das 18h00 às 20h00.
+    -   Todo estudo adional é encorajado.
+
+## O que é o ... {.middle .center}
+
+--- 
+
+### R?
+
+R é um ambiente de software livre para computação estatística e gráficos. (https://www.r-project.org/)
+
+### RStudio?
+
+**RStudio** é uma IDE (*integrated development environment*) baseado em Linguagem R, ou seja, um ambiente de desenvolvimento que utilizamos para editar e executar os códigos em R.
+
+### RStudio Cloud?
+
+É a IDE RStudio que podemos utilizar via navegador (sem que seja necessário instalar nada).
+
+## Pré-requisitos
+
+### Para usar no dia-a-dia:
+
+-   `R` e `RStudio` instalados no seu computador:
+
+-   Links para instalação:
+
+    -   [R](https://cran.r-project.org/bin/windows/base/)
+    -   [RStudio](https://rstudio.com/products/rstudio/download/)
+
+### Caso não consiga instalar
+
+-   [RStudio Cloud](https://rstudio.cloud)
+
+## Por quê usar linguagens de programação no trabalho? {.middle .center}
+
+## As vantagens de analisar dados usando linguagens de programação {.smaller}
+
+-   O código é uma linguagem, então podemos documentar os passos da nossa análise. Isso é, escrever, linha à linha, os passos do processo de análise.
+
+-   O código é texto, então podemos copiar e colar, facilitando enormemente a transposição do código para novos casos.
+
+-   As linguagens de programação para ciência de dados mais utilizadas são de código aberto, em especial R, com dominância em certos nichos acadêmicos, e Pyhton, com popularidade ascentende e mais utilizado no universo corporativo.
+    * Fora do Brasil, é mais comum empresas de ponta utilizarem o `R` ao invés de Python.
+
+-   Alternativas proprietárias (fechadas, controladas por empresas que cobram por licenças ou assinatura) incluem softwares como Stata, SAS, SPSS, entre outras. Ou seja, mais **custo** para o negócio.
+
+::: footer
+:::
+
+## O que significa ser código aberto e software livre? {.smaller}
+
+1.  *Free Software* como em "liberdade" não como em "grátis". Na prática temos acesso gratuito (na maioria dos casos). Os usuários podem modificar e aperfeiçoar o código-fonte.
+
+2.  As pessoas podem acessar as ferramentas, tendo as condições mínimas em termos de _hardware_ e conhecimento, independente de poderem pagar uma licensa de uso.
+
+3.  Estudantes podem usar software semelhante ao de profissionais. 
+
+4.  Você pode corrigir problemas e aprimorar a linguagem e eventualmente contribuir e modificar o projeto principal.
+
+5.  Você pode desenvolver suas próprias ferramentas. 
+
+6.  Possibilita a existência de uma comunidade ativa. 
+ 
+::: footer
+:::
+
+
+
+## Por quê o R? {.middle .center}
+
+## O ciclo da ciência de dados
+
+<img src="../images/ciclo-ciencia-de-dados.png" style="display: block; margin-left: auto; margin-right: auto;"/>
+
+::: footer
+Slide por [Curso-R](https://curso-r.com/).
+:::
+
+## O ciclo da ciência de dados com o R
+
+<img src="../images/ciclo-ciencia-de-dados-pacotes.png" style="display: block; margin-left: auto; margin-right: auto;"/>
+
+::: footer
+Slide por [Curso-R](https://curso-r.com/).
+:::
+
+## Por quê usar o R?
+
+-   É uma linguagem de programação que possui muitas ferramentas para análise de dados
+
+-   É *código aberto* (open source)
+
+-   Possui uma comunidade ativa de pessoas desenvolvedoras
+
+-   É flexível, permite desenvolver funções e pacotes para facilitar o trabalho
+
+-   Está disponível, gratuitamente, em diferentes plataformas: Windows, Linux e Mac
+
+-   Mantido pela [R Development Core Team](https://cran.r-project.org/)
+
+
+# Reprodutibilidade  
+
+## Um exemplo prático e cotidiano
+
+- Vocês já tentaram repetir uma análise feita meses atrás e não lembraram como chegaram no resultado?  
+
+- Já recebeu uma planilha e não entendeu como a pessoa chegou naqueles resultados, já que faltam passos claros de como executar a análise?
+
+- Você já ficou "irritado" de ter que fazer toda uma análise, que parece MUITO com alguma outra que você já fez mas que só mudou a variável de interesse?
+
+- Isso conecta com a experiência comum de quem lida com dados;  
+
+- Reprodutibilidade é como pensar no seu eu do futuro e na sua equipe: todo mundo deve ser capaz de apertar *Run* e obter exatamente o mesmo resultado.  
+
+
+# Por que isso é importante? {.middle .center}
+
+---
+
+- **Validação do conhecimento**: Permite confirmar resultados e aumentar a credibilidade científica;  
+- **Transparência e confiança**: Exige documentação clara de métodos, dados e códigos;  
+- **Acúmulo de conhecimento**: Garante que novas pesquisas possam se apoiar em resultados anteriores;  
+- **Correção de erros e vieses**: Facilita a detecção de falhas metodológicas ou fraudes;  
+- **Formação de analistas e pesquisadores**: Reproduzir estudos é parte essencial do aprendizado científico;
+
+
+# Ok e qual a relação com o curso de `R`?
+
+- Queremos mostrar que aprender `R` não é só “programar”, mas se alinhar com boas práticas;
+- Usar `R` significa estar preparado para dialogar com transparência em todos os ambientes;
+- Vamos aprender a preparar scripts que visam documentar **todo o processo**.
+
+## Por que a reprodutibilidade é fundamental?
+
+
+### Em resumo
+> A reprodutibilidade é um **pilar ético e epistemológico da ciência**, pois assegura que o conhecimento seja verificável e coletivo, não apenas dependente da autoridade de um pesquisador.
+
+
+## Plano das aulas
+
+* Temas:
+  + Aula 01: Apresentação e motivação do curso
+    - Configuração e Ambientação dentro do RStudio
+    - Primeiros passos e conceitos fundamentais
+  + Aula 02:Manipulação de dados, parte 1
+  + Aula 03:Manipulação de dados, parte 2
+  + Aula 04: Visualização com `{ggplot2}`
+    - Relatórios dinâmicos com `Quarto`
+  + Aula 05: Mapas e variáveis demográficas
+
+# Configuração e ambientação do RStudio
+
+## Conhecendo o Rstudio {.smaller}
+
+![O Rstudio](../images/rstudio-editor.png){width=100%}
+
+---
+
+* O RStudio apresenta 04 quadrantes: 
+  + Editor/Script: é onde passaremos a maior parte do tempo.
+  + Console: é onde os códigos são "enviados" e onde obtemos as respostas. Este é o `R`!
+  + Os outros painéis são auxilares: 
+    - Environment: painel com os `objetos` criados na sessão;
+    - History: painel com o histórico de comandos executados;
+    - Files: é como se fosse a Área de Trabalho do seu computador. Mostra os arquivos;
+    - Plots: autoexplicativo. É onde as imagens geradas aparecem;
+    - Packages: janela para encontrar a documentação dos pacotes e funções;
+    - Viewr: Onde relatórios e dashboards aparecem. 
+
+::: footer
+:::
+
+## Atenção! {.smaller}
+
+::: {.callout-warning}
+O `RStudio` é um pai coruja 🦉. Isso significa que ele vai querer te lembrar de **TODOS** os comandos que você executou anteriormente. Isso é salvo em dois arquivos ocultos: `.RData` (guarda os objetos de uma sessão) e `.Rhistory` (abriga todos os comandos executados). 
+:::
+
+[**Qual o problema disso, então?**]{style="color:blue;"} 
+
+1. Te acostuma [mal]{style="color:red;"}
+2. Faz com que você conte com sua sorte! ☘
+3. Dificulta a **reprodutibilidade**
+  i. Afinal, você não precisa se preocupar em fazer um código legível, porque sempre contará com a facilidade de ter os objetos e comandos salvos.
+4. O uso do `.RData` pode fazer com que seu ambiente de trabalho fique muito pesado!
+  i. Isso porque ele vai salvar todas as suas bases de dados, independente do tamanho.
+  i. Logo, você terá muito mais lentidão ao iniciar o `RStudio`, dependendo das configurações de seu computador.
+  
+
+## Como desativar?^[Atenção: se você nunca usar, nem vai sentir falta!] {.nonincremental .smaller}
+
+::: columns
+::: {.column width = "50%"}
+
+![](../images/desativar-rdata.png){width=90% fig-align="left"}
+
+:::
+
+::: {.column width = "50%"}
+
+- Vá em `Tools -> Global options... -> General`
+
+- Pronto! Agora você vai garantir um ambiente de trabalho eficiente e reprodutível.
+
+> Se acostumar com sessões efêmeras não é uma tarefa fácil e um desconforto inicial é esperado. Pode ser que você ache entediante executar o mesmo código toda vez que abrir seu RStudio, mas é importante ter em mente que esse programa só está lá e pode ser executado inúmeras vezes porque o R não estará mais fazendo o [**seu**]{style="color:red;"} trabalho. [*Zen do R*, capítulo 2](https://curso-r.github.io/zen-do-r/rdata-rhistory.html) 
+
+:::
+::::
+
+
+::: footer
+:::
+
+# Direto para o `R`!
+
+## O Básico do `R` {.smaller}
+
+Vamos para o quadrante do `Editor/Script` no RStudio. Se somarmos, por exemplo, `1 + 1`, veremos que o `R` nos retorna `[1] 2`.
+
+```{r}
+#| echo: true
+1 + 1
+
+# Se você usar uma "#", o código fica comentado. Ou seja, é só um texto! 
+
+# 1 + 1 
+```
+
+* Se colocarmos uma `#` antes do código, nós estamos comentando ele. 
+  + Assim, o código não é executado. 
+  + Comentar o código é bom para documentar a análise! 
+    - Afinal, a tendência é nós esquecermos as coisas. Portanto, uma boa prática é deixar o registro do que fizemos! 
+    - PS: os seus colegas podem se beneficiar disso também. 😉 
+    
+## `R` como calculadora {.smaller}
+
+
+Todas as operações possíveis!
+
+```{r}
+#| echo: true
+# adição
+1 + 1
+
+# subtração
+4 - 2
+
+# multiplicação
+2 * 3
+
+# divisão
+5 / 3
+
+# potência
+4 ^ 2
+
+# resto da divisão de 10 por 3
+10 %% 3
+
+# parte inteira da divisão de 10 por 3
+10 %/% 3  
+```
+
+---
+
+Assim como na matemática, a divisão e a multiplicação são calculadas antes da adição e da subtração! De qualquer forma, usar os parênteses nunca é demais.
+
+```{r}
+#| echo: true
+
+50 + 1 * 8
+```
+
+É o mesmo que: 
+
+```{r}
+#| echo: true
+
+50 + (1 * 8)
+```
+
+E diferente de :
+
+```{r}
+#| echo: true
+
+(50 + 1) * 8
+```
+
+::: {.callout-tip}
+No `Script`, ao final da linha de código, você pode executar `CTRL + ENTER`. Este é o atalho para **rodar, avaliar** ou **executar** o seu código! Você vera a resposta diretamente no **Console**.
+:::
+
+::: footer
+:::
+
+## Objetos, vetores e funções
+
+### Objetos
+
+Grosso modo, objetos são nomes que guardam informações. Tabelas, números, funções etc. Para criar um objeto, basta usar os operadores `<-` ou `=`. 
+
+```{r}
+#| echo: true
+x <- 1 # Leia-se: atribuo o valor 1 ao objeto x
+y = 2  # Leia-se: atribuo o valor 2 ao objeto y
+
+X <- 2 
+```
+
+::: {.callout-tip}
+Na comunidade `R`, a convenção é usarmos o sinal `<-` ao invés do sinal de `=`. Na maioria dos casos, se você usar `<-` ou `=`, vai obter o mesmo resultado. [Entretanto]{style="color:red;"}, o sinal de igualdade é reservado para `funções` dentro do `R`. O atalho para o sinal de atribuição `<-` é `ALT -`. 
+:::
+
+---
+
+### O `R` é sensível 😭😱
+
+#### O que isso quer dizer? 
+
+O `R` diferencia letras maiúsculas e minúsculas. Tecnicamente, dizemos que o `R` é _case sensitive_.
+
+```{r}
+#| echo: true
+
+x 
+
+# é diferente de  
+
+X
+```
+
+
+
+```{r}
+#| echo: true
+
+meu_objeto <- c(1:10)
+
+Meu_objeto <- c(11:20)
+
+```
+
+
+```{r}
+#| echo: true
+
+meu_objeto 
+
+Meu_objeto
+
+```
+
+---
+
+## Boas práticas de "nomenclatura" {.smaller}
+
+1. Evitar o uso de MAIÚSCULAS
+2. Evitar o uso de nomes iguais a funções
+    i. `mean()`, `sum()`, `sd()`
+3. Evitar acentos ou caracteres especiais
+    i. Evitar o uso de [Ç]{style="color:red;"}
+  ```r
+  ação <- 1
+  ```
+1. Usar nomes já existentes no seu ambiente de trabalho, porque o `R` irá sobrescrever
+1. Recomendamos:
+  ```r
+  bancodedados <- 1   # Ruim
+  banco_de_dados <- 1 # Bom
+  ```
+    i. Ou seja, substituimos os ` ` por `_`
+
+::: footer
+:::
+
+---
+
+## Vetores {.smaller}
+
+Os objetos no `R` podem comportar muitas informações de uma só vez. A mais frequente que nós utilizamos são os **vetores**. Eles são um conjunto de informações atribuídas em uma única linha. Os vetores podem ser:
+
+::: {.nonincremental}
+
+
+1. Numéricos:
+
+```{r}
+#| echo: true
+vetor_1 <- 1:10 # Vetor que vai de 1 até 10
+vetor_2 <- c(0.1, -5.0, 3.13, 100.1) 
+```
+
+2. Textuais (conhecidos como `character`):
+
+```{r}
+#| echo: true
+vetor_4 <- "Olá Mundo"
+vetor_5 <- c("Conjunto", "de", "texto", "em", "um", "vetor")
+```
+
+É possível verificar a classe dos vetores:
+
+```{r}
+#| echo: true
+class(vetor_1) # integer (numero inteiro)
+class(vetor_2) # numeric (apresenta número decimal)
+class(vetor_5) # character (texto)
+```
+
+:::
+
+--- 
+
+## Pedindo ajuda para o `R`
+
+No slide anterior, vimos uma coisa estranha que ainda não apresentamos. O que é o `c()`?
+
+
+```r
+vetor_5 <- c("Conjunto", "de", "texto", "em", "um", "vetor")
+```
+
+Para pedir ajuda ao `R`, basta ir no `Console` e digitar:
+
+```r
+?c
+```
+
+```r
+?mean
+```
+
+
+---
+
+## Manipulando objetos {.smaller}
+
+
+```{r}
+#| echo: true
+# Criar o objeto
+meu_objeto <- c(0:50, 60, 70, 80, 90)
+meu_objeto
+
+# "Acessar" o valor de determinado elemento do vetor
+meu_objeto[1] # acessa o 1o elemento do vetor 'meu_objeto'
+meu_objeto[55] # acessa 55o elemento do vetor 'meu_objeto'
+
+# Por meio dessa selecao de valores, podemos fazer operacoes:
+meu_objeto[1] + meu_objeto[10] + meu_objeto[55] 
+meu_objeto[1] + meu_objeto[10] * meu_objeto[55]
+meu_objeto[1] - meu_objeto[10] 
+meu_objeto[10] ^ meu_objeto[3]
+```
+
+
+---
+
+### Funções
+
+```{r}
+#| echo: true
+# Calcular algumas estatisticas descritivas:
+mean(meu_objeto) # media
+max(meu_objeto)  # maximo
+min(meu_objeto)  # minimo
+
+# Guardar essas informacoes em objetos
+media  <- mean(meu_objeto)
+maximo <- max(meu_objeto)
+minimo <- min(meu_objeto)
+
+# Unir em um vetor
+## c significa concatenar
+descritivas <- c(media, maximo, minimo)
+descritivas
+```
+
+## Operadores lógicos {.smaller}
+
+| Operador | Operação                          |
+|----------|:----------------------------------|
+| `!`      | Negação (não)                     |
+| `&`      | E (avalia elemento a elemento)    |
+| `|`      | Ou (avalia elemento a elemento)   |
+| `<`      | Menor                             |
+| `<=`     | Menor ou igual                    |
+| `>`      | Maior                             |
+| `>=`     | Maior ou igual                    |
+| `!=`     | Diferente                         |
+| `&&`     | E (avalia apenas o 1º elemento)   |
+| `||`     | Ou (avalia apenas o 1º elemento)  |
+
+: Operadores lógicos no `R`
+
+
+# Diretório de trabalhos e Projetos
+
+------------------------------------------------------------------------
+
+> Se a sua primeira linha do seu Script é
+
+```{r}
+#| eval: false
+#| echo: true
+setwd("C:/Users/artur/caminho/que/só/voce/tem")
+```
+
+> Eu irei até a sua casa e colocarei FOGO no seu computador 🔥
+
+> Se a segunda linha do seu script for
+
+```{r}
+#| eval: false
+#| echo: true
+rm(list = ls())
+```
+
+> Eu farei a mesma coisa 🔥😠
+
+------------------------------------------------------------------------
+
+-   Alguns conceitos são importantes para se trabalhar no `R`. Um deles é a ideia de diretórios de trabalhos (*working directory*) e projetos.
+
+    -   Isso porque quando queremos importar algum arquivo em nosso computador (para fazer uma análise, por exemplo), precisamos dizer exatamente onde este arquivo se encontra.
+
+-   Para isso, usamos o conceito de `caminhos`.
+
+------------------------------------------------------------------------
+
+### Caminhos absolutos e relativos {.smaller}
+
+`Caminhos` podem ser:
+
+:::: nonincremental
+-   Absolutos:
+
+```{r}
+#| eval: false
+#| echo: true
+dados <- readxl::read_xlsx("C:/Users/artur/OneDrive/Área de Trabalho/Projetos/cursos-oferecidos/curso-programacao-para-humanidades/dados/dados_bbrutos.xlsx")
+```
+
+Ou seja, o caminho completo desde a raiz do seu computador até o arquivo desejado.
+
+-   Relativos:
+
+```{r}
+#| eval: false
+#| echo: true
+dados <- readxl::read_xlsx("dados/dados_brutos.xlsx")
+```
+
+Ou um caminho **relativo** à uma pasta de referência.
+
+::: callout-tip
+## Boas práticas
+
+Usar caminhos relativos, ao invés de caminhos absolutos, garante que o código funcione em **qualquer** computador!
+:::
+::::
+
+::: footer
+:::
+
+## Diretórios de trabalho
+
+Um diretório de trabalho no `R` é o diretório (ou pasta) para onde o R se baseia quando precisamos interagir com os nossos arquivos.
+
+-   Para sabermos qual nosso diretóio atual, usa-se a função `getwd()`
+
+```{r}
+#| echo: true
+getwd()
+```
+
+## Projetos no RStudio: o `.RProj` {.middle .center}
+
+------------------------------------------------------------------------
+
+A melhor forma de organizar os seus arquivos dentro do `R` é usando Projetos.
+
+-   Quando criamos um `projeto` no RStudio, ele cria uma pasta para nós e define essa pasta como diretório de trabalho (lembra do caminho relativo?).
+    -   Além disso, o RStudio também cria um arquivo chamado `.RProj` dentro da pasta.
+    -   Trabalhar com `projetos` facilita a organização de arquivos e a reprodução do código.
+-   Canto superior esquerdo, clicar em `File > New Project...`
+
+---
+
+### Criando pastas
+
+``` {r}
+#| eval: false
+#| echo: true
+dir.create("dados")
+dir.create("dados_output") 
+dir.create("scripts")
+dir.create("graficos")
+```
+
+# Obrigado {.middle .center}
+
+
+

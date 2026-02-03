@@ -1,0 +1,9 @@
+/* Localiza o ícone do youtube dentro da barra de navegação e muda a cor */
+.bi-youtube {
+  color: #FF0000 !important;
+}
+
+/* Opcional: muda a cor quando passa o mouse por cima */
+.bi-youtube:hover {
+  color: #CC0000 !important;
+}

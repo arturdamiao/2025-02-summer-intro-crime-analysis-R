@@ -20,7 +20,7 @@ Além deste site, o material do curso também é composto por:
 
 
 :::{.callout-note}
-Recomendamos que todas as pessoas participantes que verifiquem a página [Instruções de instalação](instalacao.qmd) antes do início do curso.
+Recomendamos que todas as pessoas participantes que verifiquem a página [Instruções de instalação](chapters/instalacao.qmd) antes do início do curso.
 
 Caso tenha alguma dificuldade, entre em contato com o instrutor do curso antes do início das aulas.
 :::

@@ -14,7 +14,6 @@ format:
 
 editor: source
 
-embed-resources: true
 lang: pt
 author: 
   - name: Artur Damião
