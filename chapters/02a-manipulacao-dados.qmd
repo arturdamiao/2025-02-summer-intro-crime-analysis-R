@@ -73,6 +73,7 @@ pacman::p_load(
                )
 ```
 
+O script de nossa aula está disponível [aqui](../scripts/02-conhecendo-dados.R)! 
 
 # Ambientação e importação de pacotes
 
@@ -278,6 +279,8 @@ Quando carregamos este conjunto de dados, ele pertence à uma classe chamada `da
 ```{r}
 gasoline <- as_tibble(Gasoline)
 ```
+
+> O tibble no `R` é uma versão moderna e aprimorada do `data.frame` tradicional, projetada para facilitar a manipulação e visualização de dados dentro do ecossistema Tidyverse. Ele é conhecido por não alterar tipos de dados automaticamente, imprimir apenas as primeiras 10 linhas e colunas ajustadas à tela, tornando a exploração de conjuntos de dados grandes mais eficiente e organizada.
 
 Adicionalmente, quero deixar todas os países da coluna `country` com letras minúsculas. Para isso: 
 

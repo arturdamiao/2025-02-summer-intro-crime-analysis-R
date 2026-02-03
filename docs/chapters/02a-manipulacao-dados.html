@@ -413,6 +413,7 @@ Figura&nbsp;5.1: Usando uma função sem carregar o pacote
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>              janitor    <span class="co"># pacote para limpeza de dados</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>               )</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p>O script de nossa aula está disponível <a href="../scripts/02-conhecendo-dados.R">aqui</a>!</p>
 </section>
 <section id="ambientação-e-importação-de-pacotes" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Ambientação e importação de pacotes</h1>
@@ -778,6 +779,9 @@ argument.</code></pre>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>gasoline <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(Gasoline)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<blockquote class="blockquote">
+<p>O tibble no <code>R</code> é uma versão moderna e aprimorada do <code>data.frame</code> tradicional, projetada para facilitar a manipulação e visualização de dados dentro do ecossistema Tidyverse. Ele é conhecido por não alterar tipos de dados automaticamente, imprimir apenas as primeiras 10 linhas e colunas ajustadas à tela, tornando a exploração de conjuntos de dados grandes mais eficiente e organizada.</p>
+</blockquote>
 <p>Adicionalmente, quero deixar todas os países da coluna <code>country</code> com letras minúsculas. Para isso:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>gasoline <span class="ot">&lt;-</span> gasoline <span class="sc">|&gt;</span> </span>
