@@ -1,9 +1,11 @@
 {
-  "hash": "4402604ad6a725a02b9be8b3ee8aaeb8",
+  "hash": "ff561d9b5ed97388c6b624c709d18046",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Analisando dados da Secretaria de Segurança Pública\"\n---\n\n\n## Nosso conjunto de dados\n\nNosso conjunto de dados, para fins de exploração, serão as estatísticas dos dados criminais da Secretaria de Segurança Pública do Estado de São Paulo para o ano de 2025. Os dados estão disponíveis no [portal da SSP](https://www.ssp.sp.gov.br/estatistica).\n\n### Lendo dados direto do site da Secretaria\n\nUtilizando a função `import` do pacote `rio`, é possível copiar a `url` e ler diretamente da página do site da SSP. Ao passarmos o _mouse_ em cima do ano de 2025 nas [estatísticas de dados criminais da SSP](https://www.ssp.sp.gov.br/estatistica/consultas), podemos ver que, no final da página, nos é apresentado um link. Podemos copiar este link e lê-lo diretamente do `RStudio`, conforme apresentado na @fig-importacao-url:\n\n![Importando URL](../images/importaca_url_sitessp.png){#fig-importacao-url fig-align=\"center\"}\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nssp_2025 <- rio::import(\"https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2025.xlsx\")\n```\n:::\n\n\n\nVisualindo as primeiras linhas:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nglimpse(ssp_2025)\n```\n:::\n\n\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"Analisando dados da Secretaria de Segurança Pública\"\n---\n\n\n## Nosso conjunto de dados\n\nNosso conjunto de dados, para fins de exploração, serão as estatísticas dos dados criminais da Secretaria de Segurança Pública do Estado de São Paulo para o ano de 2025. Os dados estão disponíveis no [portal da SSP](https://www.ssp.sp.gov.br/estatistica).\n\n### Lendo dados direto do site da Secretaria\n\nUtilizando a função `import` do pacote `rio`, é possível copiar a `url` e ler diretamente da página do site da SSP. Ao passarmos o _mouse_ em cima do ano de 2025 nas [estatísticas de dados criminais da SSP](https://www.ssp.sp.gov.br/estatistica/consultas), podemos ver que, no final da página, nos é apresentado um link. Podemos copiar este link e lê-lo diretamente do `RStudio`, conforme apresentado na @fig-importacao-url:\n\n![Importando URL](../images/importaca_url_sitessp.png){#fig-importacao-url fig-align=\"center\"}\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nssp_2025 <- rio::import(\"https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2025.xlsx\")\n```\n:::\n\n\n\nVisualindo as primeiras linhas:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nglimpse(ssp_2025)\n```\n:::\n\n\n----\n\nScript disponível [aqui](../scripts/03-analise-ssp.R)",
+    "supporting": [
+      "03-importando-dados_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

@@ -30,3 +30,6 @@ Visualindo as primeiras linhas:
 glimpse(ssp_2025)
 ```
 
+----
+
+Script disponível [aqui](../scripts/03-analise-ssp.R)
